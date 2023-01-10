@@ -1,0 +1,9 @@
+*.exe
+*.ddb
+*.sce
+*.dsf
+*.lnk
+*.url
+*.session
+*.trizbort
+dump.py
