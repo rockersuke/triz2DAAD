@@ -25,7 +25,7 @@ El script requiere como argumentos un fichero de entrada (que debe ser un mapa g
 - La opción -idloc creará automáticamente identificadores para las localidades mediante directivas #define.
 - La opción -lobj hará que en vez de únicamente el objeto 0, todos los objetos marcados en su nombre con [l] sean fuentes de luz.
 - La opción -blockall bloqueará las acciones "TODO" en la plantilla resultante.
-- La opción -dr creará una plantilla compatible con DAAD Ready 0.7
+- La opción -dr activa el modo -dsf y creará una plantilla compatible con DAAD Ready 0.7
 - La opción -ink establecerá el color de tinta en 16 bits (por defecto 1).
 
 Enlaces:
@@ -217,7 +217,7 @@ The script requires as an argument a file (wwhich must be a map generated with e
 - Option -idloc will automatically create location identifiers with #define directives.
 - Option -lobj will make any object with its name marked with [l] a light source, instead of just object 0.
 - Option -blockall will block "ALL" actions in the resulting template.
-- Option -dr will create a DAAD Ready 0.7 compatible template.
+- Option -dr sets -dsf mode and will create a DAAD Ready 0.7 compatible template.
 - Option -ink will set ink colour in 16 bits (default 1).
 
 Links:
