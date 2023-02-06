@@ -4287,7 +4287,10 @@ def imprimePRO6():
                 print('                SET CPNoun', file=f)
                 print('                SET CPAdject', file=f)
                 print('                LET OFlags 64', file=f)
-        print('                GOTO '+str(startRoom), file=f)
+        if idloc:
+            print('                GOTO '+listLocationIdentifiers[startRoom-1], file=f)
+        else:
+            print('                GOTO '+str(startRoom), file=f)
         print('', file=f)
         if verbosity:
                 print('OK.')
@@ -4407,7 +4410,10 @@ def imprimePRO6_DR():
         print('                SET fCPronounNoun', file=f)
         print('                SET fCPronounAdject', file=f)
         print('                LET fObjFlags 64', file=f)
-        print('                GOTO ' + str(startRoom), file=f)
+        if idloc:
+            print('                GOTO '+listLocationIdentifiers[startRoom-1], file=f)
+        else:
+            print('                GOTO '+str(startRoom), file=f)
         print('', file=f)
         if verbosity:
                 print('OK.')
@@ -5027,7 +5033,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b9 230109 (c) 2019-23 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b10 230206 (c) 2019-23 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
@@ -5045,7 +5051,7 @@ parser.add_argument('-idobj', help="Añade directivas 'define' para identificar 
 parser.add_argument('-idloc', help="Añade directivas 'define' para identificar las localidades", action="store_true")
 parser.add_argument('-lobj', help="En lugar del objeto 0, considera objetos marcados con [l] como fuente de luz.", action="store_true")
 parser.add_argument('-blockall', help="Bloquea acciones TODO.", action="store_true")
-parser.add_argument('-dr', '--daadready', help="Crea plantillas compatibles con DAADReady 0.4", action="store_true")
+parser.add_argument('-dr', '--daadready', help="Crea plantillas compatibles con DAADReady 0.7", action="store_true")
 parser.add_argument('-ink', help='Tinta por defecto en 16 bits', type=int)
 
 args=parser.parse_args()
@@ -5086,6 +5092,8 @@ if daadReady:
                 else:
                         print(' ATENCIÓN: el modo DAADReady desactiva la barra de estado.')
         statusLine=False
+        idobj = True
+        idloc = True
 
 if dsf:
         ext='.dsf'
