@@ -3552,7 +3552,10 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
                         if e==False and e2==True:
                                 if dsf:
                                         print('>', file=f)
-                                print(b+'       _       AT '+str(y['loc']), file=f)
+                                if idloc:
+                                    print(b + '       _       AT ' + listLocationIdentifiers[y['loc'] - 1], file=f)
+                                else:
+                                    print(b + '       _       AT ' + str(y['loc']), file=f)
                                 if dsf:
                                         print('                SET fDark', file=f)
                                 else:
@@ -3562,7 +3565,10 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
                         if e==True and e2==False:
                                 if dsf:
                                         print('>', file=f)
-                                print(b+'       _       AT '+str(y['loc']), file=f)
+                                if idloc:
+                                    print(b + '       _       AT ' + listLocationIdentifiers[y['loc'] - 1], file=f)
+                                else:
+                                    print(b + '       _       AT ' + str(y['loc']), file=f)
                                 if dsf:
                                         print('                CLEAR fDark', file=f)
                                 else:
@@ -3864,7 +3870,10 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
                         if e==False and e2==True:
                                 if dsf:
                                         print('>', file=f)
-                                print(b+'       _       AT '+str(y['loc']), file=f)
+                                if idloc:
+                                    print(b + '       _       AT ' + listLocationIdentifiers[y['loc'] - 1], file=f)
+                                else:
+                                    print(b + '       _       AT ' + str(y['loc']), file=f)
                                 if dsf:
                                         print('                SET fDark', file=f)
                                 else:
@@ -3874,7 +3883,10 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
                         if e==True and e2==False:
                                 if dsf:
                                         print('>', file=f)
-                                print(b+'       _       AT '+str(y['loc']), file=f)
+                                if idloc:
+                                    print(b + '       _       AT ' + listLocationIdentifiers[y['loc'] - 1], file=f)
+                                else:
+                                    print(b + '       _       AT ' + str(y['loc']), file=f)
                                 if dsf:
                                         print('                CLEAR fDark', file=f)
                                 else:
@@ -5509,4 +5521,4 @@ else:
         print('Fichero ' + out_file + ' creado.')
 print()
 
-#listAll()
+listAll()

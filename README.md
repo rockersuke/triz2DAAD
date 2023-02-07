@@ -102,6 +102,7 @@ HISTORIA
 - **1.0.4b10** 230206
 
  - La opción -dr activa automáticamente -idobj e -idloc
+ - Usa idloc en PRO 5 y 6.
 
 - **1.0.4b9** 230109
 
@@ -299,6 +300,7 @@ HISTORY
 - **1.0.4b10** 230206
 
  - -dr option automatically sets -idobj and -idloc.
+ - idloc used in PRO 5 and 6.
 
 - **1.0.4b9** 230109
 
