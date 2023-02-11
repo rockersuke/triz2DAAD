@@ -309,7 +309,7 @@ def recursive_objects(list, parent):
                 obj_id += 1
                 listObjects.append(z)
                 if z['content'] != []:
-                        # A los objetos contenidos en otro les asigna el 'obj_id' del contenedor comm 'parent' del objeto contenido.
+                        # A los objetos contenidos en otro les asigna el 'obj_id' del contenedor como 'parent' del objeto contenido.
                         # Como los obj_id son siempre a partir de 3000, será fácil distinguir cuando un objeto comienza el juego
                         # contenido dentro de otro.
                         recursive_objects(z['content'], z['obj_id'])
@@ -470,7 +470,7 @@ def imprimeDEF_SPA():
                 print('; Define valores por defecto para papel y tinta tanto de la ventana de texto como de la barra de estado', file=f)
                 print(';', file=f)
                 print('; Valores para PC.', file=f)
-                print('; Para pruebas en modo sólo texto se recomienda usar 15 en vez de 1 (larga historia detrás).', file=f)
+                print('; Para pruebas en modo sólo texto se recomienda usar 7 en vez de 1 (larga historia detrás).', file=f)
                 print(';', file=f)
                 if dsf:
                         print('#ifdef "PC"', file=f)
@@ -890,7 +890,7 @@ def imprimeDEF_ENG():
         print('; Set default paper and ink colours for both main text and status bar windows.', file=f)
         print(';', file=f)
         print('; PC Colours', file=f)
-        print('; If using text-only mode 15 is recommended instead of 1 (long story behind).', file=f)
+        print('; If using text-only mode 7 is recommended instead of 1 (long story behind).', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "PC"', file=f)
@@ -3528,11 +3528,9 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
         if blockall:
                 print('; Bloquea acciones "TODO".', file=f)
                 print('', file=f)
-                #print('#ifdef "MSX2"', file=f)
                 if dsf:
                         print('>', file=f)
                 print('_       TODO    NOTDONE', file=f)
-                #print('#endif', file=f)
                 print('', file=f)
         x=False
         for y in listRooms2:
@@ -3846,11 +3844,9 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
         if blockall:
                 print('; Block "ALL" actions..', file=f)
                 print('', file=f)
-                #print('#ifdef "MSX2"', file=f)
                 if dsf:
                         print('>', file=f)
                 print('_       TODO    NOTDONE', file=f)
-                #print('#endif', file=f)
                 print('', file=f)
         x=False
         for y in listRooms2:
@@ -5045,7 +5041,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b10 230206 (c) 2019-23 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b10 230212 (c) 2019-23 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
@@ -5445,8 +5441,27 @@ for y in listContainers:
 
 for x, y in enumerate(listRooms, start=1):
         y['loc']=x
+        
+# 1.0.4b10 Actualiza los nombres y descripciones de localidad por defecto ("localidad XX", "descripción de localidad XX") si se hubieran añadido contenedores que hubiesen afectado la numeración.
 
-# Actualiza las localidades de inicio de los objetos en función de las localidades "contenedor" añadidas
+if listContainers != []:
+    for y in listRooms:
+        if english:
+            if y['description'].startswith('Location '):
+                y['description'] = 'Location ' + str(y['loc']) + ' description'
+            if y['name'].startswith('Location '):
+                y['name'] = 'Location ' + str(y['loc'])
+            if y['subtitle'].startswith('Location '):
+                y['subtitle'] = 'Location ' + str(y['loc'])    
+        else:
+            if y['description'].startswith('Descripción de localidad '):
+                y['description'] = 'Descripción de localidad ' + str(y['loc'])
+            if y['name'].startswith('Localidad '):
+                y['name'] = 'Localidad ' + str(y['loc'])
+            if y['subtitle'].startswith('Localidad '):
+                y['subtitle'] = 'Localidad ' + str(y['loc'])
+
+# Actualiza las localidades de inicio de los objetos en función de las localidades "contenedor" añadidas.
 
 for y in listObjects:
         y['loc']=y['loc']+len(listContainers)
@@ -5521,4 +5536,4 @@ else:
         print('Fichero ' + out_file + ' creado.')
 print()
 
-listAll()
+#listAll()
