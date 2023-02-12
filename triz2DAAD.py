@@ -4492,6 +4492,16 @@ def imprimeOtrosPros(darkStatusLine):
               print('; ¡OJO!, gasta los flags 100 y 101', file=f)         
         print('',file=f)
         if dsf:
+            print('>', file=f)
+        if dsf:
+            print('_       _       NOTZERO fDarkF', file = f)
+        else:
+            print('_       _       NOTZERO DarkF', file = f)
+        print('                SYSMESS 0 ', file = f)
+        print('                NEWLINE', file = f)
+        print('                DONE ', file = f)
+        print('',file=f)
+        if dsf:
                 print('>', file=f)
         print('_       _       MES 0',file=f)
         print('                CLEAR 101',file=f)
@@ -4516,6 +4526,7 @@ def imprimeOtrosPros(darkStatusLine):
         if dsf:
                 print('>', file=f)
         print('_       _       NOTZERO 101', file=f)
+        print('                NEWLINE', file = f)
         print('                DONE',file=f)      
         print('',file=f)
         if dsf:
@@ -4570,46 +4581,46 @@ def imprimeOtrosPros(darkStatusLine):
                 print('OK.')
                       
 def imprimeOtrosPros_DR():
-        print('/PRO 7',file=f)
-        print('', file=f)
+        print('/PRO 7',file = f)
+        print('', file = f)
         if english:
-              print('; Automatic exits listing', file=f)
-              print('; WARNING! It uses flags 100 and 101', file=f)       
+              print('; Automatic exits listing', file = f)
+              print('; WARNING! It uses flags 100 and 101', file = f)       
         else:     
-              print('; Listado automático de salidas', file=f)
-              print('; ¡OJO!, gasta los flags 100 y 101', file=f)         
-        print('',file=f)
+              print('; Listado automático de salidas', file = f)
+              print('; ¡OJO!, gasta los flags 100 y 101', file = f)         
+        print('', file = f)
+        print('>', file = f)
+        print('_       _       NOTZERO fDarkF', file = f)    
+        print('                SYSMESS 0 ', file = f)
+        print('                NEWLINE', file = f)
+        print('                DONE ', file = f)
+        print('', file = f)
+        print('>', file = f)
+        print('_       _       MES 0', file = f)
+        print('                CLEAR 101', file = f)
+        print('                LET 33 2', file = f)
+        print('', file = f)
+        print('>', file = f)
+        print('_       _       COPYFF 38 100', file = f)
+        print('                MOVE 100', file = f)
+        print('                MES @33', file = f)
+        print('                PLUS 101 1', file = f)
+        print('', file = f)
+        print('>', file=f)
+        print('_       _       PLUS 33 1', file = f)
+        print('                LT 33 14', file = f)
+        print('                SKIP -2', file = f)
+        print('', file = f)
+        print('>', file = f)
+        print('_       _       NOTZERO 101', file = f)
+        print('                NEWLINE', file = f)
+        print('                DONE',file = f)      
+        print('', file = f)
         if dsf:
-                print('>', file=f)
-        print('_       _       MES 0',file=f)
-        print('                CLEAR 101',file=f)
-        print('                LET 33 2',file=f)
-        print('',file=f)
-        if dsf:
-                print('>', file=f)
-        print('_       _       COPYFF 38 100',file=f)
-        print('                MOVE 100',file=f)
-        if dsf:
-                print('                MES @33',file=f)
-        else:
-                print('                MES [33]',file=f)
-        print('                PLUS 101 1',file=f)
-        print('',file=f)
-        if dsf:
-                print('>', file=f)
-        print('_       _       PLUS 33 1',file=f)
-        print('                LT 33 14',file=f)
-        print('                SKIP -2',file=f)
-        print('',file=f)
-        if dsf:
-                print('>', file=f)
-        print('_       _       NOTZERO 101', file=f)
-        print('                DONE',file=f)      
-        print('',file=f)
-        if dsf:
-                print('>', file=f)
-        print('_       _       MESSAGE 1', file=f)
-        print('',file=f)
+                print('>', file = f)
+        print('_       _       MESSAGE 1', file = f)
+        print('', file=  f)
         if verbosity:
                 print('OK.')
 

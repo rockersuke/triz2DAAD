@@ -100,10 +100,11 @@ HISTORIA
 ========
 
 - **1.0.4b10** 230212
-
+ 
  - La opción -dr activa automáticamente -idobj e -idloc
  - Usa idloc en PRO 5 y 6.
  - Actualiza la numeración de localidades en la descripción por defecto si se usan contenedores.
+ - La oscuridad impide la acción "salidas".
 
 - **1.0.4b9** 230109
 
@@ -303,6 +304,7 @@ HISTORY
  - -dr option automatically sets -idobj and -idloc.
  - idloc used in PRO 5 and 6.
  - Updates location numbers in default descriptions when using containers.
+ - Darkness avoids the "exits" command.
 
 - **1.0.4b9** 230109
 
@@ -396,4 +398,4 @@ HISTORY
 - **1.0** 190501
 
  - Load files from both Trizbort desktop and web applications.
- - Support forr DAAD Reborn Compiler DSF format.
+ - Support for DAAD Reborn Compiler DSF format.
