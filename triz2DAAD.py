@@ -5052,7 +5052,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b10 230212 (c) 2019-23 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b10 230222 (c) 2019-23 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
@@ -5471,6 +5471,18 @@ if listContainers != []:
                 y['name'] = 'Localidad ' + str(y['loc'])
             if y['subtitle'].startswith('Localidad '):
                 y['subtitle'] = 'Localidad ' + str(y['loc'])
+
+# 1.0.4b10 Finalmente añade el nombre de la localidad en las descripciones de localidad por defecto.
+
+for y in listRooms:
+    if english:
+        if y['name'].startswith('Location ') == False:
+            if y['description'].startswith('Location '):
+                y['description'] += ': ' + y['name']
+    else:
+        if y['name'].startswith('Localidad ') == False:
+            if y['description'].startswith('Descripción de localidad '):
+                y['description'] += ': ' + y['name']
 
 # Actualiza las localidades de inicio de los objetos en función de las localidades "contenedor" añadidas.
 

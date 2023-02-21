@@ -3,7 +3,7 @@ Triz2DAAD
 
 English instructions below!
 
-Triz2DAAD versión 1.0.4b10 230212 (c) 2019-23 Pedro Fernández
+Triz2DAAD versión 1.0.4b10 230222 (c) 2019-23 Pedro Fernández
 
 Triz2DAAD es la fusión de los anteriores scripts de Python Triz2sce y Trizio2sce, que cargaban, en cada caso, ficheros procedentes de las utilidades Trizbort y Trizbort.io respectivamente. Este nuevo script carga indistintamente de una o de otra y realiza internamente la conversión necesaria para que un sólo script se puedan manjar ambos formatos.
 
@@ -99,11 +99,12 @@ Bugs conocidos:
 HISTORIA
 ========
 
-- **1.0.4b10** 230212
+- **1.0.4b10** 230222
  
  - La opción -dr activa automáticamente -idobj e -idloc
  - Usa idloc en PRO 5 y 6.
  - Actualiza la numeración de localidades en la descripción por defecto si se usan contenedores.
+ - La descripción por defecto de las localidades incluye su nº y, si estuviera definido, su nombre.
  - La oscuridad impide la acción "salidas".
 
 - **1.0.4b9** 230109
@@ -203,7 +204,7 @@ HISTORIA
 Triz2DAAD english doc
 **********************
 
-Triz2DAAD version 1.0.4b10 230212 (c) 2019-23 Pedro Fernández
+Triz2DAAD version 1.0.4b10 230222 (c) 2019-23 Pedro Fernández
 
 Triz2DAAD is a Python 3.x script that transforms a file generated with either the on-line text-adventure mapping tool Trizbort.io or the Trizbort desktop application into a source code compatible with the DAAD compiler. It's the fussion of former scripts Triz2SCE and Trizio2SCE, admitting both formats.
 It's not meant to be either an adventure visual designer or a complete development tool. It's conceived as a fast and easy text-adventure prototyping tool, and also as a supporting tool for novel authors, specially suitable for learning workshops.
@@ -299,11 +300,12 @@ Known bugs:
 HISTORY
 ========
 
-- **1.0.4b10** 230212
+- **1.0.4b10** 230222
 
  - -dr option automatically sets -idobj and -idloc.
  - idloc used in PRO 5 and 6.
  - Updates location numbers in default descriptions when using containers.
+ - Default location description includes its number and, if defined, its name.
  - Darkness avoids the "exits" command.
 
 - **1.0.4b9** 230109
