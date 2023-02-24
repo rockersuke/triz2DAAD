@@ -3,7 +3,7 @@ Triz2DAAD
 
 English instructions below!
 
-Triz2DAAD versión 1.0.4b11 230222 (c) 2019-23 Pedro Fernández
+Triz2DAAD versión 1.0.4b11 230224 (c) 2019-23 Pedro Fernández
 
 Triz2DAAD es la fusión de los anteriores scripts de Python Triz2sce y Trizio2sce, que cargaban, en cada caso, ficheros procedentes de las utilidades Trizbort y Trizbort.io respectivamente. Este nuevo script carga indistintamente de una o de otra y realiza internamente la conversión necesaria para que un sólo script se puedan manjar ambos formatos.
 
@@ -99,9 +99,10 @@ Bugs conocidos:
 HISTORIA
 ========
 
-- **1.0.4b11** 230222
+- **1.0.4b11** 230224
 
  - La descripción por defecto de las localidades incluye su nº y, si estuviera definido, su nombre.
+ - Retiradas las restricciones para el intérprete de MSX2.
 
 - **1.0.4b10** 230212
  
@@ -303,9 +304,10 @@ Known bugs:
 HISTORY
 ========
 
-- **1.0.4b11** 230222
+- **1.0.4b11** 230224
 
  - Default location description includes its number and, if defined, its name.
+ - Removed MSX2 interpreter restrictions.
 
 - **1.0.4b10** 230212
 

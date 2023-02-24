@@ -444,24 +444,14 @@ def imprimeDEF_SPA():
         print(';', file=f)
         if daadReady==False:
                 print('; Define valores por defecto para la posición de la ventana de texto.', file=f)
+                print(';', file=f)
                 textRow1=14
                 if statusLine:
                         textRow2=1
                 else:
                         textRow2=0
-                if dsf:
-                        print('#ifdef "MSX2"', file=f)
-                        print(' #define textrow1 ' + str(textRow1) + ' ; Posición de la ventana de texto en localidades con gráfico.', file=f)
-                        print(' #define textrow2 ' + str(textRow1) + ' ; Posición de la ventana de texto en localidades sin gráfico.', file=f)
-                        print('#endif', file=f)
-                        print(';', file=f)
-                        print('#ifndef "MSX2"', file=f)
-                        print(' #define textrow1 ' + str(textRow1) + ' ; Posición de la ventana de texto en localidades con gráfico.', file=f)
-                        print(' #define textrow2 ' + str(textRow2) + ' ; Posición de la ventana de texto en localidades sin gráfico.', file=f)
-                        print('#endif', file=f)
-                else:
-                        print('#define textrow1 ' + str(textRow1) + ' ; Posición de la ventana de texto en localidades con gráfico.', file=f)
-                        print('#define textrow2 ' + str(textRow2) + ' ; Posición de la ventana de texto en localidades sin gráfico.', file=f)
+                print('#define textrow1 ' + str(textRow1) + ' ; Posición de la ventana de texto en localidades con gráfico.', file=f)
+                print('#define textrow2 ' + str(textRow2) + ' ; Posición de la ventana de texto en localidades sin gráfico.', file=f)
                 print(';', file=f)
                 if statusLine:
                         print('; Define posición de la barra de estado.', file=f)
@@ -868,29 +858,19 @@ def imprimeDEF_ENG():
                 print('#define Turns_TAB "COLS-13"', file=f)
         print(';', file=f)
         print('; Default values for text window position.', file=f)
+        print(';', file=f)
         textRow1=14
         if statusLine:
                 textRow2=1
         else:
                 textRow2=0
-        if dsf:
-                print('#ifdef "MSX2"', file=f)
-                print(' #define textrow1 ' + str(textRow1) + ' ; Locations with graphics.', file=f)
-                print(' #define textrow2 ' + str(textRow1) + ' ; Locations without graphics.', file=f)
-                print('#endif', file=f)
-                print(';', file=f)
-                print('#ifndef "MSX2"', file=f)
-                print(' #define textrow1 ' + str(textRow1) + ' ; Locations with graphics.', file=f)
-                print(' #define textrow2 ' + str(textRow2) + ' ; Locations without graphics.', file=f)
-                print('#endif', file=f)
-        else:
-                print('#define textrow1 ' + str(textRow1) + ' ; Locations with graphics.', file=f)
-                print('#define textrow2 ' + str(textRow2) + ' ; Locations without graphics.', file=f)
+        print('#define textrow1 ' + str(textRow1) + ' ; Locations with graphics.', file=f)
+        print('#define textrow2 ' + str(textRow2) + ' ; Locations without graphics.', file=f)
         print(';', file=f)
         print('; Set default paper and ink colours for both main text and status bar windows.', file=f)
         print(';', file=f)
-        print('; PC Colours', file=f)
-        print('; If using text-only mode 7 is recommended instead of 1 (long story behind).', file=f)
+        print('; PC colours', file=f)
+        print('; If using text-only mode 7 is recommended for ink instead of 1 (long story behind).', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "PC"', file=f)
@@ -906,7 +886,7 @@ def imprimeDEF_ENG():
         else:
                 print('#ENDIF', file=f)
         print(';', file=f)
-        print('; ZX SPECTRUM Colours', file=f)
+        print('; ZX SPECTRUM colours', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "SPE"', file=f)
@@ -922,7 +902,7 @@ def imprimeDEF_ENG():
         else:
                 print('#ENDIF', file=f)
         print(';', file=f)
-        print('; COMMODORE 64 Colours', file=f)
+        print('; COMMODORE 64 colours', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "CBM64"', file=f)
@@ -938,7 +918,7 @@ def imprimeDEF_ENG():
         else:
                 print('#ENDIF', file=f)
         print(';', file=f)
-        print('; AMSTRAD CPC Colours', file=f)
+        print('; AMSTRAD CPC colours', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "CPC"', file=f)
@@ -954,7 +934,7 @@ def imprimeDEF_ENG():
         else:
                 print('#ENDIF', file=f)
         print(';', file=f)
-        print('; MSX Colours', file=f)
+        print('; MSX colours', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "MSX"', file=f)
@@ -970,7 +950,7 @@ def imprimeDEF_ENG():
         else:
                 print('#ENDIF', file=f)
         print(';', file=f)
-        print('; ATARI ST Colours', file=f)
+        print('; ATARI ST colours', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "ST"', file=f)
@@ -986,7 +966,7 @@ def imprimeDEF_ENG():
         else:
                 print('#ENDIF', file=f)
         print(';', file=f)
-        print('; AMIGA Colours', file=f)
+        print('; AMIGA colours', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "AMIGA"', file=f)
@@ -1002,7 +982,7 @@ def imprimeDEF_ENG():
         else:
                 print('#ENDIF', file=f)
         print(';', file=f)
-        print('; PCW Colours', file=f)
+        print('; PCW colours', file=f)
         print(';', file=f)
         if dsf:
                 print('#ifdef "PCW"', file=f)
@@ -1019,7 +999,7 @@ def imprimeDEF_ENG():
                 print('#ENDIF', file=f)
         print(';', file=f)
         if dsf:
-                print('; Valores para Commodore Plus 4', file=f)
+                print('; Commodore Plus 4 colours', file=f)
                 print(';', file=f)
                 print('#ifdef "CP4"', file=f)
                 print(' #define bg_colour 0      ; Main window background (paper) colour.', file=f)
@@ -1029,7 +1009,7 @@ def imprimeDEF_ENG():
                         print(' #define sb_fg_colour 0   ; Status bar foreground (ink) colour.', file=f)
                 print('#endif', file=f)
                 print(';', file=f)
-                print('; Valores para MSX2', file=f)
+                print('; MSX2 colours', file=f)
                 print(';', file=f)
                 print('#ifdef "MODE_5_6"', file=f)
                 print(' #define bg_colour 0      ; Main window background (paper) colour.', file=f)
@@ -3635,9 +3615,6 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
         print('                DONE', file=f)
         print('', file=f)
         if dsf:
-                print('; "VACIAR" y "SACAR TODO" bloqueados en MSX2.', file=f)
-                print('', file=f)
-                print('#ifndef "MSX2"', file=f)
                 print('>', file=f)
         print('VACIA   _       WHATO', file=f)
         print('                NOTEQ 51 255', file=f)
@@ -3651,8 +3628,6 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
         else:
                 print('                COPYFF Noun1 Noun2', file=f)
         print('                SYNONYM SACAR TODO', file=f)
-        if dsf:
-                print('#endif', file=f)
         print('', file=f)
         if dsf:
                 print('>', file=f)
@@ -3687,10 +3662,6 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
                                 print('                AUTOP ' + listObjectIdentifiers[x], file=f)
                         else:
                                 print('                AUTOP ' + str(x), file=f)
-                        if dsf:
-                                print('#ifdef "MSX2"', file=f)
-                                print('                DONE     ; Parche exclusivo para MSX2', file=f)
-                                print('#endif', file=f)
                         print('', file=f)
                 for x,y in enumerate(listContainers, start=1):
                         if dsf:
@@ -3721,10 +3692,6 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
                                 print('                AUTOT ' + listObjectIdentifiers[x], file=f)
                         else:
                                 print('                AUTOT ' + str(x), file=f)
-                        if dsf:
-                                print('#ifdef "MSX2"', file=f)
-                                print('                DONE     ; Parche exclusivo para MSX2', file=f)
-                                print('#endif', file=f)
                         print('', file=f)
         print('', file=f)
         if dsf:
@@ -3951,9 +3918,6 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
         print('                DONE', file=f)
         print('', file=f)
         if dsf:
-                print('; Block "EMPTY" and "GET ALL FROM" in MSX2.', file=f)
-                print('', file=f)
-                print('#ifndef "MSX2"', file=f)
                 print('>', file=f)
         print('EMPTY   _       WHATO', file=f)
         print('                NOTEQ 51 255', file=f)
@@ -3967,8 +3931,6 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
         else:
                 print('                COPYFF Noun1 Noun2', file=f)
         print('                SYNONYM GET ALL', file=f)
-        if dsf:
-                print('#endif', file=f)
         print('', file=f)
         if dsf:
                 print('>', file=f)
@@ -5052,7 +5014,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b11 230222 (c) 2019-23 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b11 230224 (c) 2019-23 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
