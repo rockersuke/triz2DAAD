@@ -233,6 +233,12 @@ def xml2json():
                                 endType=dirType[a]
                         else:
                                 endType=0
+                        # 1.0.4b12
+                        # la variable validConnector será False a menos que encuentre 2 elementos "dock"
+                        # dentro de un "line", es decir, que la línea sea normalita y empieze y acabe en
+                        # una localidad y no en un punto inconexo ni cosas raras (como que sean líneas fantasma que, al no tener
+                        # dock de comienzo ni de final, no están visibles en el mapa pero existen en el XML)
+                        validConnector = False        
                         for x in y:
                                 if x.tag=='dock':
                                         if x.get('index')=='0':
@@ -241,11 +247,19 @@ def xml2json():
                                                 if a in dirCardinal:
                                                         startDir=dirCardinal[a]
                                         else:
+                                                # 1.0.4b12
+                                                # si llega hasta aquí es que hay al menos 2 elementos "dock" en el "line"
+                                                # así que es una línea "buena".
+                                                validConnector = True
                                                 dockEnd=int(x.get('id'))
                                                 a=x.get('port')
                                                 if a in dirCardinal:
                                                         endDir=dirCardinal[a]
-                        data['elements'].append({'id':id, 'type':'Connector', 'oneWay':oneWay, 'startType':startType, 'endType':endType, 'dockStart':dockStart, 'dockEnd':dockEnd, 'startDir':startDir, 'endDir':endDir})
+                        # 1.0.4b12
+                        # Sólo añade un elemento "Connector" si validConnector es True, es decir, si ha encontrado al menos
+                        # 2 elementos "dock"
+                        if validConnector:                                
+                            data['elements'].append({'id':id, 'type':'Connector', 'oneWay':oneWay, 'startType':startType, 'endType':endType, 'dockStart':dockStart, 'dockEnd':dockEnd, 'startDir':startDir, 'endDir':endDir})
 
         return data
 
@@ -5014,7 +5028,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b11 230224 (c) 2019-23 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b12 230406 (c) 2019-23 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
