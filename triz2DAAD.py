@@ -5340,7 +5340,7 @@ for y in data['elements']:
                         else:
                                 y['name']='Localidad ' + str(loc)
                 if y['subtitle']=='':
-                        y['subtitle']=y['name']
+                        y['subtitle']=y['name']    
                 y['subtitle']=y['subtitle'][:26]
                 if y['description']=='':
                         if english:

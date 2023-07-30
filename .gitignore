@@ -2,6 +2,8 @@
 *.ddb
 *.sce
 *.dsf
+*.jpg
+*.json
 *.lnk
 *.url
 *.session
