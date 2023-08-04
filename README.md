@@ -3,7 +3,7 @@ Triz2DAAD
 
 English instructions below!
 
-Triz2DAAD versión 1.0.4b14 230801 (c) 2019-23 Pedro Fernández
+Triz2DAAD versión 1.0.4b14 230804 (c) 2019-23 Pedro Fernández
 
 Triz2DAAD es la fusión de los anteriores scripts de Python Triz2sce y Trizio2sce, que cargaban, en cada caso, ficheros procedentes de las utilidades Trizbort y Trizbort.io respectivamente. Este nuevo script carga indistintamente de una o de otra y realiza internamente la conversión necesaria para que un sólo script se puedan manjar ambos formatos.
 
@@ -99,7 +99,7 @@ Bugs conocidos:
 HISTORIA
 ========
 
--**1.0.4b14** 230801
+-**1.0.4b14** 230804
 
  - El comentario en la sección MTX sobre los mensajes de salidas menciona al proceso adecuado (que puede ser 7 o 10).
  - Corrije fallo de la plantilla de DAAD-Ready 0.8 que hace que el mensaje de ANYKEY del proceso 6 salga por la ventana 0.
@@ -317,7 +317,7 @@ Known bugs:
 HISTORY
 ========
 
--**1.0.4b14** 230801
+-**1.0.4b14** 230804
 
  - Comment about exit messages at MTX mentions the right process (could be either 7 or 10).
  - Fixed DAAD-Ready template bug that prints the ANYKEY message at process 6 in window 0.

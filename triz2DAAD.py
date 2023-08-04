@@ -5059,7 +5059,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b14 230801 (c) 2019-23 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b14 230804 (c) 2019-23 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
