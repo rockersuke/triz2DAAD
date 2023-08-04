@@ -2825,7 +2825,11 @@ def imprimeMTX_SPA_DSF():
         print(';', file=f)
         print('; Mensajes del juego.', file=f)
         print(';', file=f)
-        print('; Los mensajes 0 a 13 se usan por Triz2DAAD para su rutina de listado de salidas (process 10).', file=f)
+        if daadReady:
+                aux = str(7)
+        else:
+                aux = str(10)
+        print('; Los mensajes 0 a 13 se usan por Triz2DAAD para su rutina de listado de salidas (process ' + aux + ').', file=f)
         print(';', file=f)
         print('/0 "Salidas visibles: "', file=f)       
         print('/1 "ninguna"', file=f)  
@@ -2861,7 +2865,11 @@ def imprimeMTX_SPA():
         print(';', file=f)
         print('; Mensajes del juego.', file=f)
         print(';', file=f)
-        print('; Los mensajes 0 a 13 se usan por Triz2DAAD para su rutina de listado de salidas (process 10).', file=f)
+        if daadReady:
+            aux = str(7)
+        else:
+            aux = str(10)
+        print('; Los mensajes 0 a 13 se usan por Triz2DAAD para su rutina de listado de salidas (process ' + aux + ').', file=f)
         print(';', file=f)
         print('/0',file=f)
         print('Salidas visibles: ', file=f)       
@@ -2913,7 +2921,11 @@ def imprimeMTX_ENG():
         print(';', file=f)
         print('; Game messages.', file=f)
         print(';', file=f)
-        print('; Messages 0 to 13 are used by Triz2DAAD in its exits listing routine (process 10).', file=f)
+        if daadReady:
+                aux = str(7)
+        else:
+                aux = str(10)
+        print('; Messages 0 to 13 are used by Triz2DAAD in its exits listing routine (process ' + aux + ').', file=f)
         print(';', file=f)
         print('/0',file=f)
         print('Visible exits: ', file=f)  
@@ -2965,7 +2977,11 @@ def imprimeMTX_ENG_DSF():
         print(';', file=f)
         print('; Game messages.', file=f)
         print(';', file=f)
-        print('; Messages 0 to 13 are used by Triz2DAAD in its exits listing routine (process 10).', file=f)
+        if daadRaedy:
+                aux = str(7)
+        else:
+                aux = str(10)
+        print('; Messages 0 to 13 are used by Triz2DAAD in its exits listing routine (process ' + aux + ').', file=f)
         print(';', file=f)
         print('/0 "Visible exits: "', file=f)  
         print('/1 "none"', file=f)     
@@ -4334,8 +4350,16 @@ def imprimePRO6_DR():
         print('                    #endif', file=f)
         print('                #endif', file=f)
         print('', file = f)
+        if english:
+            print('; The WINDOW 1 condact is a patch to avoid DAAD-Ready writting', file = f)
+            print('; the ANYKEY and 14 messages at window 0', file = f)
+        else:
+            print('; Ese primer WINDOW 1 es un parche para evitar que DAAD-Ready ponga', file = f)
+            print('; el mensaje de ANYKEY (y también el 14) en la ventana 0', file = f)
+        print('', file = f)
         print('>', file = f)
-        print('_       _       ANYKEY', file = f)
+        print('_       _       WINDOW 1', file = f)
+        print('                ANYKEY', file = f)
         print('                CLS', file=f)
         print('                MESSAGE 14', file = f)
         print('                ANYKEY', file = f)
@@ -5035,7 +5059,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b13 230723 (c) 2019-23 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b14 230801 (c) 2019-23 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
