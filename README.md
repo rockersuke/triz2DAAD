@@ -321,7 +321,7 @@ Known bugs:
 HISTORY
 ========
 
-- **1.0.4b15:: 231031
+- **1.0.4b15** 231031
 
  - Minor changes to keep up to date with DAAD Ready 0.9.1
 
