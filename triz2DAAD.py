@@ -353,9 +353,9 @@ def imprimeDEF():
         if daadReady:
                 print(';', file=f)
                 if english:
-                        print('; DAAD Ready 0.8 specific definitions.', file=f)
+                        print('; DAAD Ready 0.9.1 specific definitions.', file=f)
                 else:
-                        print('; Definiciones específicas para DAAD Ready 0.8', file=f)
+                        print('; Definiciones específicas para DAAD Ready 0.9.1', file=f)
                 print(';', file=f)
                 if english:
                         print("; --- Please don't remove the following code, it makes sure the game works fine for all supported targets", file=f)
@@ -767,6 +767,8 @@ def imprimeDEF_SPA():
                 print('#define fAdverb            36', file=f)
                 print('#define fMaxCarr           37', file=f)
                 print('#define fPlayer            38', file=f)
+                print('#define fStream            41', file=f)
+                print('#define fPrompt            42', file=f)
                 print('#define fPrep              43', file=f)
                 print('#define fNoun2             44', file=f)
                 print('#define fAdject2           45', file=f)
@@ -1177,6 +1179,8 @@ def imprimeDEF_ENG():
                 print('#define fAdverb            36', file=f)
                 print('#define fMaxCarr           37', file=f)
                 print('#define fPlayer            38', file=f)
+                print('#define fStream            41', file=f)
+                print('#define fPrompt            42', file=f)
                 print('#define fPrep              43', file=f)
                 print('#define fNoun2             44', file=f)
                 print('#define fAdject2           45', file=f)
@@ -1847,7 +1851,7 @@ def imprimeSTX_2p_SPA_DSF():
         print('/15 "Vale.#n"', file=f)
         print('/16 "Pulsa una tecla para continuar.#n"', file=f)
         print('/17 "" ;*Has jugado', file=f)
-        print('/18 "" ;*\sturno', file=f)
+        print('/18 "" ;*\\sturno', file=f)
         print('/19 "" ;*s', file=f)
         print('/20 "" ;*.[CR]', file=f)
         print('/21 "" ;*Has resuelto un', file=f)
@@ -1923,7 +1927,7 @@ def imprimeSTX1p_SPA_DSF():
         print('/15 "Vale.#n"', file=f)
         print('/16 "Pulsa una tecla para continuar.#n"', file=f)
         print('/17 "" ;*Has jugado', file=f)
-        print('/18 "" ;*\sturno', file=f)
+        print('/18 "" ;*\\sturno', file=f)
         print('/19 "" ;*s', file=f)
         print('/20 "" ;*.[CR]', file=f)
         print('/21 "" *Ha resuelto un', file=f)
@@ -1999,7 +2003,7 @@ def imprimeSTX_1p_ENG_DSF():
         print('/15 "OK.#n"', file=f)
         print('/16 "Press any key to continue.#n"', file=f)
         print('/17 "" ; *You have taken', file=f)
-        print('/18 "" ; *\sturn', file=f)
+        print('/18 "" ; *\\sturn', file=f)
         print('/19 "" ; *s', file=f)
         print('/20 "" ; *.[CR]', file=f)
         print('/21 "" ; *You have scored', file=f)
@@ -2075,7 +2079,7 @@ def imprimeSTX_2p_ENG_DSF():
         print('/15 "OK.#n"', file=f)
         print('/16 "Press any key to continue.#n"', file=f)
         print('/17 "" ; *You have taken', file=f)
-        print('/18 "" ; *\sturn', file=f)
+        print('/18 "" ; *\\sturn', file=f)
         print('/19 "" ; *s', file=f)
         print('/20 "" ; *.[CR]', file=f)
         print('/21 "" ; *You have scored', file=f)
@@ -2177,7 +2181,7 @@ def imprimeSTX_2p_SPA():
         print('Pulsa una tecla para continuar.',file=f)
         print('',file=f)
         print('/17 ;*Has jugado',file=f)
-        print('/18 ;*\sturno',file=f)
+        print('/18 ;*\\sturno',file=f)
         print('/19 ;*s',file=f)
         print('/20 ;*.[CR]',file=f)
         print('/21 ;*Has resuelto un',file=f)
@@ -2350,7 +2354,7 @@ def imprimeSTX_2p_ENG():
         print('Press any key to continue.', file=f)
         print('', file=f)
         print('/17 ;*You have taken', file=f)
-        print('/18 ;*\sturn', file=f)
+        print('/18 ;*\\sturn', file=f)
         print('/19 ;*s', file=f)
         print('/20 ;*.[CR]', file=f)
         print('/21 ;*You have scored', file=f)
@@ -2523,7 +2527,7 @@ def imprimeSTX_1p_SPA():
         print('Pulsa una tecla para continuar.', file=f)
         print('', file=f)
         print('/17 ;*Has jugado', file=f)
-        print('/18 ;*\sturno', file=f)
+        print('/18 ;*\\sturno', file=f)
         print('/19 ;*s', file=f)
         print('/20 ;*.[CR]', file=f)
         print('/21 ;*Ha resuelto un', file=f)
@@ -2696,7 +2700,7 @@ def imprimeSTX_1p_ENG():
         print("Press any key to continue.", file=f)
         print("", file=f)
         print("/17 ;*You have taken", file=f)
-        print("/18 ;*\sturn", file=f)
+        print("/18 ;*\\sturn", file=f)
         print("/19 ;*s", file=f)
         print("/20 ;*.[CR]", file=f)
         print("/21 ;*You have scored", file=f)
@@ -3203,12 +3207,12 @@ def imprimePRO0_DR():
                                         print('                ABSENT ' + str(z), file=f)
         print('                SET fDarkF', file=f)
         print('', file=f)
-        # 1.0.4b6 Lo que sigue es un copia-pega del PRO 0 de DAAD-Ready 0.8 ya que no hay tiempo de hacer una versión específica para Triz2DAAD. Si todo va bien, funcionará.
+        # 1.0.4b6 Lo que sigue es un copia-pega del PRO 0 de DAAD-Ready 0.9.1 ya que no hay tiempo de hacer una versión específica para Triz2DAAD. Si todo va bien, funcionará.
         if english:
-            print('; What follows is essentially a copy-paste from DAAD Ready 0.8 PRO 0 template.', file = f)
+            print('; What follows is essentially a copy-paste from DAAD Ready 0.9.1 PRO 0 template.', file = f)
             print('; Hopefully, it will work!', file = f)
         else:
-            print('; Lo que sigue es básicamente un copia-pega de la plantilla del PRO 0 de DAAD Ready 0.8', file = f)
+            print('; Lo que sigue es básicamente un copia-pega de la plantilla del PRO 0 de DAAD Ready 0.9.1', file = f)
             print('; ¡Con suerte, funcionará!', file = f)
         print('', file = f)
         print('#ifndef "zx128"', file = f)
@@ -3840,7 +3844,7 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
         print('/PRO 5', file=f)
         print('', file=f)
         print('; PRO 5 is the former "events table" from Quill or "Response table" from PAWS.', file=f)
-        print('; It\s called from PRO 1.', file=f)
+        print('; It\'s called from PRO 1.', file=f)
         print('', file=f)
         if blockall:
                 print('; Block "ALL" actions..', file=f)
@@ -4318,10 +4322,10 @@ def imprimePRO6_DR():
                 print('; -Comienza el bucle de reseteo de banderas.', file=f)
         print('', file=f)
         if english:
-            print('; What follows is essentially a copy-paste from DAAD-Ready 0.8 routine.', file = f)
+            print('; What follows is essentially a copy-paste from DAAD-Ready 0.9.1 routine.', file = f)
             print('; Hopefully, it will work!', file=f)
         else:
-            print('; Lo que sigue es básicamente un copia-pega de la rutina de DAAD-Ready 0.8', file = f)
+            print('; Lo que sigue es básicamente un copia-pega de la rutina de DAAD-Ready 0.9.1', file = f)
             print('; ¡Con suerte, funcionará!', file=f)
         print('', file=f)    
         print('#ifndef "zx128"', file=f)
@@ -5059,7 +5063,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b14 230804 (c) 2019-23 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b15 231031 (c) 2019-23 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
@@ -5077,7 +5081,7 @@ parser.add_argument('-idobj', help="Añade directivas 'define' para identificar 
 parser.add_argument('-idloc', help="Añade directivas 'define' para identificar las localidades", action="store_true")
 parser.add_argument('-lobj', help="En lugar del objeto 0, considera objetos marcados con [l] como fuente de luz.", action="store_true")
 parser.add_argument('-blockall', help="Bloquea acciones TODO.", action="store_true")
-parser.add_argument('-dr', '--daadready', help="Crea plantillas compatibles con DAADReady 0.8", action="store_true")
+parser.add_argument('-dr', '--daadready', help="Crea plantillas compatibles con DAADReady 0.9.1", action="store_true")
 parser.add_argument('-ink', help='Tinta por defecto en 16 bits', type=int)
 
 args=parser.parse_args()
@@ -5108,9 +5112,9 @@ else:
                 
 if daadReady:
         if english:
-                print('-Exporting to a DAADReady 0.8 compatible template.')
+                print('-Exporting to a DAADReady 0.9.1 compatible template.')
         else:
-                print('-Exportando a una plantilla comnpatible con DAADReady 0.8')
+                print('-Exportando a una plantilla comnpatible con DAADReady 0.9.1')
         dsf=True
         if statusLine:
                 if english:
