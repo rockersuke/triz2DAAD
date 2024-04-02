@@ -353,30 +353,36 @@ def imprimeDEF():
         if daadReady:
                 print(';', file=f)
                 if english:
-                        print('; DAAD Ready 0.9.2 specific definitions.', file=f)
+                        print('; DAAD Ready 0.9.3 specific definitions.', file = f)
                 else:
-                        print('; Definiciones específicas para DAAD Ready 0.9.2', file=f)
-                print(';', file=f)
+                        print('; Definiciones específicas para DAAD Ready 0.9.3', file = f)
+                print(';', file = f)
                 if english:
-                        print("; --- Please don't remove the following code, it makes sure the game works fine for all supported targets", file=f)
+                        print("; --- Please don't remove the following code, it makes sure the game works fine for all supported targets", file = f)
                 else:
-                        print('; --- Por favor no quites este código, es importante para controlar los distintos objetivos', file=f)
-                print('#ifdef "SPLIT"', file=f)
-                print('#define splitModeON 1', file=f)
-                print('#endif', file=f)
-                print('', file=f)
-                print('#ifdef "tape48"', file=f)
-                print('#define tape 1', file=f)
-                print('#endif', file=f)
-                print('', file=f)
-                print('#ifndef "tape"', file=f)
-                print('#ifndef "st"', file=f)
-                print('#ifndef "amiga"', file=f)
-                print('#ifndef "zx128"', file=f)
+                        print('; --- Por favor no quites este código, es importante para controlar los distintos objetivos', file = f)
+                print('#ifdef "SPLIT"', file = f)
+                print('#define splitModeON 1', file = f)
+                print('#endif', file = f)
+                print('', file = f)
+                print('#ifdef "tape48"', file = f)
+                print('#define tape 1', file = f)
+                print('#endif', file = f)
+                print('', file = f)
+                print('#ifndef "tape"', file = f)
+                print('#ifndef "st"', file = f)
+                print('#ifndef "amiga"', file = f)
+                print('#ifndef "zx128"', file = f)
+                print('#ifndef "next"', file = f)
                 print('    #extern "MALUVA"', file=f)
                 print('#endif', file=f)
                 print('#endif', file=f)
                 print('#endif', file=f)
+                print('#endif', file=f)
+                print('#endif', file=f)
+                print('', file=f)
+                print('#ifdef "oldnext"', file=f)
+                print('    #extern "MALUVA"', file=f)
                 print('#endif', file=f)
                 print('', file=f)
                 print('#ifdef "zx128"', file=f)
@@ -4356,6 +4362,7 @@ def imprimePRO6_DR():
         else:
                 print('; Pone a 0 todas las banderas excepto la 29 (fGFlags).', file=f)
         print('', file = f)
+        print('$initloop', file=f)
         print('>', file = f)
         print('_        _      MINUS 255 1', file=f)
         print('                NOTEQ 255 fGFlags', file=f)
@@ -4363,7 +4370,7 @@ def imprimePRO6_DR():
         print('', file=f)
         print('>', file=f)
         print('_       _       NOTZERO 255', file=f)
-        print('                SKIP -2', file=f)
+        print('                SKIP $initloop', file=f)
         print('', file=f)
         if english:
                 print('; -Reset object locations to original values (established in /OBJ).', file=f)
@@ -4384,6 +4391,7 @@ def imprimePRO6_DR():
         print('                LET fMaxCarr  4', file=f)
         print('                SET fCPronounNoun', file=f)
         print('                SET fCPronounAdject', file=f)
+        print('; LET fObjectsCarried   0 ; Inicializar este flag con el número de objetos que lleva el jugador de inici', file=f)
         print('                LET fObjFlags 64', file=f)
         if idloc:
             print('                GOTO '+listLocationIdentifiers[startRoom-1], file=f)
@@ -5019,7 +5027,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b16 240103 (c) 2019-24 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b17 240402 (c) 2019-24 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
@@ -5037,7 +5045,7 @@ parser.add_argument('-idobj', help="Añade directivas 'define' para identificar 
 parser.add_argument('-idloc', help="Añade directivas 'define' para identificar las localidades", action="store_true")
 parser.add_argument('-lobj', help="En lugar del objeto 0, considera objetos marcados con [l] como fuente de luz.", action="store_true")
 parser.add_argument('-blockall', help="Bloquea acciones TODO.", action="store_true")
-parser.add_argument('-dr', '--daadready', help="Crea plantillas compatibles con DAADReady 0.9.2", action="store_true")
+parser.add_argument('-dr', '--daadready', help="Crea plantillas compatibles con DAADReady 0.9.3", action="store_true")
 parser.add_argument('-ink', help='Tinta por defecto en 16 bits', type=int)
 
 args=parser.parse_args()
@@ -5068,9 +5076,9 @@ else:
                 
 if daadReady:
         if english:
-                print('-Exporting to a DAADReady 0.9.2 compatible template.')
+                print('-Exporting to a DAADReady 0.9.3 compatible template.')
         else:
-                print('-Exportando a una plantilla comnpatible con DAADReady 0.9.2')
+                print('-Exportando a una plantilla comnpatible con DAADReady 0.9.3')
         dsf=True
         if statusLine:
                 if english:

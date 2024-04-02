@@ -3,7 +3,7 @@ Triz2DAAD
 
 English instructions below!
 
-Triz2DAAD versión 1.0.4b16 240103 (c) 2019-24 Pedro Fernández
+Triz2DAAD versión 1.0.4b17 240402 (c) 2019-24 Pedro Fernández
 
 Triz2DAAD es la fusión de los anteriores scripts de Python Triz2sce y Trizio2sce, que cargaban, en cada caso, ficheros procedentes de las utilidades Trizbort y Trizbort.io respectivamente. Este nuevo script carga indistintamente de una o de otra y realiza internamente la conversión necesaria para que un sólo script se puedan manejar ambos formatos.
 
@@ -25,7 +25,7 @@ El script requiere como argumentos un fichero de entrada (que debe ser un mapa g
 - La opción -idloc creará automáticamente identificadores para las localidades mediante directivas #define.
 - La opción -lobj hará que en vez de únicamente el objeto 0, todos los objetos marcados en su nombre con [l] sean fuentes de luz.
 - La opción -blockall bloqueará las acciones "TODO" en la plantilla resultante.
-- La opción -dr activa los modos -dsf, -idobj e -idloc y creará una plantilla compatible con DAAD Ready 0.9.2
+- La opción -dr activa los modos -dsf, -idobj e -idloc y creará una plantilla compatible con DAAD Ready 0.9.3
 - La opción -ink establecerá el color de tinta en 16 bits (por defecto 1).
 
 Enlaces:
@@ -40,7 +40,7 @@ Enlaces:
 
 - DAAD
 
- - http://wiki.caad.es/DAAD
+ - https://web.archive.org/web/20230303170645/http://wiki.caad.es/DAAD
  - http://www.rockersuke.com/if/ebbp/
  - https://github.com/daad-adventure-writer/daad
 
@@ -82,7 +82,7 @@ Ej:
 
 **NUEVO**: La opción -blockall bloquea las acciones "TODO" con una entrada al principio de PRO5 que las descarta automáticamente.
 
-**NUEVO**: la opción -dr creará una plantilla compatible con DAAD Ready 0.9.2. En este modo la barra de estado y la opción -md quedan desactivadas. Quedan activados por defecto los modos -dsf, -idobj e -idloc.
+**NUEVO**: la opción -dr creará una plantilla compatible con DAAD Ready 0.9.3. En este modo la barra de estado y la opción -md quedan desactivadas. Quedan activados por defecto los modos -dsf, -idobj e -idloc.
 
 Y por el momento triz2DAAD no puede manejarse con:
 
@@ -98,6 +98,10 @@ Bugs conocidos:
 
 HISTORIA
 ========
+
+-**1.0.4b17** 240402
+
+ - Adapatado a Daad Ready 0.9.3
 
 -**1.0.4b16** 240103
 
@@ -229,7 +233,7 @@ HISTORIA
 Triz2DAAD english doc
 **********************
 
-Triz2DAAD version 1.0.4b16 240103 (c) 2019-24 Pedro Fernández
+Triz2DAAD version 1.0.4b17 240402 (c) 2019-24 Pedro Fernández
 
 Triz2DAAD is a Python 3.x script that transforms a file generated with either the on-line text-adventure mapping tool Trizbort.io or the Trizbort desktop application into a source code compatible with the DAAD compiler. It's the fussion of former scripts Triz2SCE and Trizio2SCE, admitting both formats.
 It's not meant to be either an adventure visual designer or a complete development tool. It's conceived as a fast and easy text-adventure prototyping tool, and also as a supporting tool for novel authors, specially suitable for learning workshops.
@@ -250,7 +254,7 @@ The script requires as an argument a file (wwhich must be a map generated with e
 - Option -idloc will automatically create location identifiers with #define directives.
 - Option -lobj will make any object with its name marked with [l] a light source, instead of just object 0.
 - Option -blockall will block "ALL" actions in the resulting template.
-- Option -dr sets -dsf, -idobj and -idloc modes and will create a DAAD Ready 0.9.2 compatible template.
+- Option -dr sets -dsf, -idobj and -idloc modes and will create a DAAD Ready 0.9.3 compatible template.
 - Option -ink will set ink colour in 16 bits (default 1).
 
 Links:
@@ -266,7 +270,7 @@ Links:
 
 - DAAD
 
- - http://wiki.caad.es/DAAD
+ - https://web.archive.org/web/20230303170645/http://wiki.caad.es/DAAD
  - http://www.rockersuke.com/if/ebbp/
  - https://github.com/daad-adventure-writer/daad
 
@@ -308,7 +312,7 @@ Examples:
 
 **NEW**: -blckall option will automaticvally discard "ALL" actions with an antry at the start of PRO5.
 
-**NEW**: -dr option will create a DAAD Ready 0.9.2 compatible template. In this mode status line and -md options are disabled. Modes -dsf, -idobj and -idloc are automatically enabled.
+**NEW**: -dr option will create a DAAD Ready 0.9.3 compatible template. In this mode status line and -md options are disabled. Modes -dsf, -idobj and -idloc are automatically enabled.
 
 And for the moment Triz2DAAD cannot handle:
 
@@ -324,6 +328,10 @@ Known bugs:
 
 HISTORY
 ========
+
+- **1.0.4b17** 240402
+
+ - Daad Ready 0.9.3 compatible.
 
 - **1.0.4b16** 240103
 
