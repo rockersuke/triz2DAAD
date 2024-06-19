@@ -5027,7 +5027,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b17 240402 (c) 2019-24 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b18 240619 (c) 2019-24 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
@@ -5488,6 +5488,27 @@ for y in data['elements']:
         if y['type']=='Connector':
                 if y['dockStart']!=0 and y['dockEnd']!=0:
                         listConnectors.append(y)
+                else:
+                
+                        # 1.0.4b18
+                        # avisa cuando un conector de trizbort.io no es considerado válido
+                        # (issue 113 en https://github.com/henck/trizbort/issues/113 )
+                        # En los ficheros XML del Trizbort de escritorio no avisa
+                        # (podríamos hacerlo en la función xml2json)
+                        # pero al fin y al cabo el trizbort de escritorio no tiene
+                        # ese bug
+                        
+                        if english:
+                                print ('WARNING - Invalid connector (will be ignored)')
+                        else:
+                                print('ATENCIÓN - Conector no válido (será ignorado)')
+                        print (' id:', y['id'])
+                        print (' name:', y['name'])
+                        print (' startDir:', y['startDir'])
+                        print (' endDir', y['endDir'])
+                        print (' dockStart:', y['dockStart'])
+                        print (' dockEnd:', y['dockEnd'])
+                        print()
                         
 if listConnectors==[]:
         if english:

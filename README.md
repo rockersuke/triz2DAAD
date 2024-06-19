@@ -3,7 +3,7 @@ Triz2DAAD
 
 English instructions below!
 
-Triz2DAAD versión 1.0.4b17 240402 (c) 2019-24 Pedro Fernández
+Triz2DAAD versión 1.0.4b18 240619 (c) 2019-24 Pedro Fernández
 
 Triz2DAAD es la fusión de los anteriores scripts de Python Triz2sce y Trizio2sce, que cargaban, en cada caso, ficheros procedentes de las utilidades Trizbort y Trizbort.io respectivamente. Este nuevo script carga indistintamente de una o de otra y realiza internamente la conversión necesaria para que un sólo script se puedan manejar ambos formatos.
 
@@ -99,19 +99,23 @@ Bugs conocidos:
 HISTORIA
 ========
 
--**1.0.4b17** 240402
+- **1.0.4b18** 240619
+
+ - Avisa cuando un conector de trizbort.io no es válido.
+
+- **1.0.4b17** 240402
 
  - Adapatado a Daad Ready 0.9.3
 
--**1.0.4b16** 240103
+- **1.0.4b16** 240103
 
  - Adapatado a Daad Ready 0.9.2
 
--**1.0.4b15** 231031
+- **1.0.4b15** 231031
 
  - Cambios menores para mantenerse al día con DAAD Ready 0.9.1
 
--**1.0.4b14** 230804
+- **1.0.4b14** 230804
 
  - El comentario en la sección MTX sobre los mensajes de salidas menciona al proceso adecuado (que puede ser 7 o 10).
  - Corrije fallo de la plantilla de DAAD-Ready 0.8.1 que hace que el mensaje de ANYKEY del proceso 6 salga por la ventana 0.
@@ -231,9 +235,9 @@ HISTORIA
  
 
 Triz2DAAD english doc
-**********************
+*********************
 
-Triz2DAAD version 1.0.4b17 240402 (c) 2019-24 Pedro Fernández
+Triz2DAAD version 1.0.4b18 240619 (c) 2019-24 Pedro Fernández
 
 Triz2DAAD is a Python 3.x script that transforms a file generated with either the on-line text-adventure mapping tool Trizbort.io or the Trizbort desktop application into a source code compatible with the DAAD compiler. It's the fussion of former scripts Triz2SCE and Trizio2SCE, admitting both formats.
 It's not meant to be either an adventure visual designer or a complete development tool. It's conceived as a fast and easy text-adventure prototyping tool, and also as a supporting tool for novel authors, specially suitable for learning workshops.
@@ -328,6 +332,10 @@ Known bugs:
 
 HISTORY
 ========
+
+- **1.0.4b18** 240619
+
+ - Warns when an invalid trizbort.io connector is found.
 
 - **1.0.4b17** 240402
 
