@@ -3,7 +3,7 @@ Triz2DAAD
 
 English instructions below!
 
-Triz2DAAD versión 1.0.4b18 240619 (c) 2019-24 Pedro Fernández
+Triz2DAAD versión 1.0.4b19 260825 (c) 2019-25 Pedro Fernández
 
 Triz2DAAD es la fusión de los anteriores scripts de Python Triz2sce y Trizio2sce, que cargaban, en cada caso, ficheros procedentes de las utilidades Trizbort y Trizbort.io respectivamente. Este nuevo script carga indistintamente de una o de otra y realiza internamente la conversión necesaria para que un sólo script se puedan manejar ambos formatos.
 
@@ -98,6 +98,10 @@ Bugs conocidos:
 
 HISTORIA
 ========
+
+- **1.0.4b19** 260825
+
+ - Arreglado bug al exportar a DAADReady en inglés: errata en imprimeMTX_ENG_DSF(), daadRaedy en vez de daadReady.
 
 - **1.0.4b18** 240619
 
@@ -237,7 +241,7 @@ HISTORIA
 Triz2DAAD english doc
 *********************
 
-Triz2DAAD version 1.0.4b18 240619 (c) 2019-24 Pedro Fernández
+Triz2DAAD version 1.0.4b19 260825 (c) 2019-25 Pedro Fernández
 
 Triz2DAAD is a Python 3.x script that transforms a file generated with either the on-line text-adventure mapping tool Trizbort.io or the Trizbort desktop application into a source code compatible with the DAAD compiler. It's the fussion of former scripts Triz2SCE and Trizio2SCE, admitting both formats.
 It's not meant to be either an adventure visual designer or a complete development tool. It's conceived as a fast and easy text-adventure prototyping tool, and also as a supporting tool for novel authors, specially suitable for learning workshops.
@@ -332,6 +336,10 @@ Known bugs:
 
 HISTORY
 ========
+
+- **1.0.4b19** 260825
+
+ - Fixed crash when exporting to DAADReady in english: mispelled daadRaedy instead of daadReady in imprimeMTX_ENG_DSF().
 
 - **1.0.4b18** 240619
 

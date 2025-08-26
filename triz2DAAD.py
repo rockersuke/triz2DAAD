@@ -2993,7 +2993,7 @@ def imprimeMTX_ENG_DSF():
         print(';', file=f)
         print('; Game messages.', file=f)
         print(';', file=f)
-        if daadRaedy:
+        if daadReady:
                 aux = str(7)
         else:
                 aux = str(10)
@@ -5027,7 +5027,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b18 240619 (c) 2019-24 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b19 250826 (c) 2019-25 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
