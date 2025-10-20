@@ -3126,12 +3126,12 @@ def imprimePRO0_DR():
                                         print('                ABSENT ' + str(z), file=f)
         print('                SET fDarkF', file=f)
         print('', file=f)
-        # 1.0.4b6 Lo que sigue es un copia-pega del PRO 0 de DAAD-Ready 0.9.3 ya que no hay tiempo de hacer una versión específica para Triz2DAAD. Si todo va bien, funcionará.
+        # 1.0.4b6 Lo que sigue es un copia-pega del PRO 0 de DAAD-Ready A ya que no hay tiempo de hacer una versión específica para Triz2DAAD. Si todo va bien, funcionará.
         if english:
-            print('; What follows is essentially a copy-paste from DAAD Ready 0.9.3 PRO 0 template.', file = f)
+            print('; What follows is essentially a copy-paste from DAAD Ready A PRO 0 template.', file = f)
             print('; Hopefully, it will work!', file = f)
         else:
-            print('; Lo que sigue es básicamente un copia-pega de la plantilla del PRO 0 de DAAD Ready 0.9.3', file = f)
+            print('; Lo que sigue es básicamente un copia-pega de la plantilla del PRO 0 de DAAD Ready A', file = f)
             print('; ¡Con suerte, funcionará!', file = f)
         print('', file = f)
         print('> ', file = f)
@@ -4170,10 +4170,10 @@ def imprimePRO6_DR():
                 print('; -Comienza el bucle de reseteo de banderas.', file = f)
         print('', file=f)
         if english:
-            print('; What follows is essentially a copy-paste from DAAD-Ready 0.9.3 routine.', file = f)
+            print('; What follows is essentially a copy-paste from DAAD-Ready A routine.', file = f)
             print('; Hopefully, it will work!', file=f)
         else:
-            print('; Lo que sigue es básicamente un copia-pega de la rutina de DAAD-Ready 0.9.3', file = f)
+            print('; Lo que sigue es básicamente un copia-pega de la rutina de DAAD-Ready A', file = f)
             print('; ¡Con suerte, funcionará!', file=f)
         print('', file = f)
         print('>', file = f)
@@ -4876,7 +4876,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b19 250826 (c) 2019-25 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b20 251020 (c) 2019-25 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
@@ -4894,7 +4894,7 @@ parser.add_argument('-idobj', help="Añade directivas 'define' para identificar 
 parser.add_argument('-idloc', help="Añade directivas 'define' para identificar las localidades", action="store_true")
 parser.add_argument('-lobj', help="En lugar del objeto 0, considera objetos marcados con [l] como fuente de luz.", action="store_true")
 parser.add_argument('-blockall', help="Bloquea acciones TODO.", action="store_true")
-parser.add_argument('-dr', '--daadready', help="Crea plantillas compatibles con DAADReady 0.9.3", action="store_true")
+parser.add_argument('-dr', '--daadready', help="Crea plantillas compatibles con DAADReady A", action="store_true")
 parser.add_argument('-ink', help='Tinta por defecto en 16 bits', type=int)
 
 args=parser.parse_args()
@@ -4925,9 +4925,9 @@ else:
                 
 if daadReady:
         if english:
-                print('-Exporting to a DAADReady 0.9.3 compatible template.')
+                print('-Exporting to a DAADReady A compatible template.')
         else:
-                print('-Exportando a una plantilla comnpatible con DAADReady 0.9.3')
+                print('-Exportando a una plantilla comnpatible con DAADReady A')
         dsf=True
         if statusLine:
                 if english:
