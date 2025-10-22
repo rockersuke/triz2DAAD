@@ -95,147 +95,147 @@ Y por el momento triz2DAAD no puede manejarse con:
 
 ## HISTORIA
 
-- **1.0.4b20**
+- **1.0.4b20** 251020 
 
   - Adaptado a DAAD Ready A      
 
 - **1.0.4b19** 250825
 
- - Arreglado bug al exportar a DAADReady en inglés: errata en imprimeMTX_ENG_DSF(), daadRaedy en vez de daadReady.
+  - Arreglado bug al exportar a DAADReady en inglés: errata en imprimeMTX_ENG_DSF(), daadRaedy en vez de daadReady.
 
 - **1.0.4b18** 240619
 
- - Avisa cuando un conector de trizbort.io no es válido.
+  - Avisa cuando un conector de trizbort.io no es válido.
 
 - **1.0.4b17** 240402
 
- - Adapatado a Daad Ready 0.9.3
+  - Adapatado a Daad Ready 0.9.3
 
 - **1.0.4b16** 240103
 
- - Adapatado a Daad Ready 0.9.2
+  - Adapatado a Daad Ready 0.9.2
 
 - **1.0.4b15** 231031
 
- - Cambios menores para mantenerse al día con DAAD Ready 0.9.1
+  - Cambios menores para mantenerse al día con DAAD Ready 0.9.1
 
 - **1.0.4b14** 230804
 
- - El comentario en la sección MTX sobre los mensajes de salidas menciona al proceso adecuado (que puede ser 7 o 10).
- - Corrije fallo de la plantilla de DAAD-Ready 0.8.1 que hace que el mensaje de ANYKEY del proceso 6 salga por la ventana 0.
+  - El comentario en la sección MTX sobre los mensajes de salidas menciona al proceso adecuado (que puede ser 7 o 10).
+  - Corrije fallo de la plantilla de DAAD-Ready 0.8.1 que hace que el mensaje de ANYKEY del proceso 6 salga por la ventana 0.
 
 - **1.0.4b13** 230723
 
- - Adaptado a DAAD Ready 0.8.
+  - Adaptado a DAAD Ready 0.8.
 
 - **1.0.4b12** 230406
  
- - Ignora líneas de conexión no válidas (que no tengan inicio y final en localidades).
+  - Ignora líneas de conexión no válidas (que no tengan inicio y final en localidades).
 
 - **1.0.4b11** 230224
 
- - La descripción por defecto de las localidades incluye su nº y, si estuviera definido, su nombre.
- - Retiradas las restricciones para el intérprete de MSX2.
+  - La descripción por defecto de las localidades incluye su nº y, si estuviera definido, su nombre.
+  - Retiradas las restricciones para el intérprete de MSX2.
 
 - **1.0.4b10** 230212
  
- - La opción -dr activa automáticamente -idobj e -idloc
- - Usa idloc en PRO 5 y 6.
- - Actualiza la numeración de localidades en la descripción por defecto si se usan contenedores.
- - La oscuridad impide la acción "salidas".
+  - La opción -dr activa automáticamente -idobj e -idloc
+  - Usa idloc en PRO 5 y 6.
+  - Actualiza la numeración de localidades en la descripción por defecto si se usan contenedores.
+  - La oscuridad impide la acción "salidas".
 
 - **1.0.4b9** 230109
 
- - Adaptado a DAAD-Ready 0.7
- - Corregido: la sección /CTL se muestra correctamente en modos -dsf y -dr
+  - Adaptado a DAAD-Ready 0.7
+  - Corregido: la sección /CTL se muestra correctamente en modos -dsf y -dr
 
 - **1.0.4b7** 220608
 
- - Adaptado a DAAD-Ready 0.6.1
+  - Adaptado a DAAD-Ready 0.6.1
 
 - **1.0.4b6** 220514
 
- - Adaptado a DAAD-Ready 0.6
+  - Adaptado a DAAD-Ready 0.6
 
 - **1.0.4b5** 220114
 
- - Nueva opción -ink para establecer el valor por defecto de la tinta en 16 bits.
+  - Nueva opción -ink para establecer el valor por defecto de la tinta en 16 bits.
 
 - **1.0.4b4** 211102
 
- - No procesa los atributos [m] y [1] de los objetos, pero los retira del nombre si estuvieran presentes (por si alguien los usase por inercia de triz2sce)
+  - No procesa los atributos [m] y [1] de los objetos, pero los retira del nombre si estuvieran presentes (por si alguien los usase por inercia de triz2sce)
 
 - **1.0.4b3** 210512
 
- - Resuelto problema con los contenedores recursivos en el nuevo formato json de Trizbort.io.
+  - Resuelto problema con los contenedores recursivos en el nuevo formato json de Trizbort.io.
 
 - **1.0.4b2** 210422
 
- - Adaptado a DAAD Ready 0.4
+  - Adaptado a DAAD Ready 0.4
 
 - **1.0.4b1** 210420
 
- - Arreglados varios bugs referentes a los identificadores de banderas en modo -DSF.
+  - Arreglados varios bugs referentes a los identificadores de banderas en modo -DSF.
 
 - **1.0.3** 210416
 
- - Adaptado al nuevo formato de json de Trizbort.io. En toería el antiguo debería seguir funcionando también. 
+  - Adaptado al nuevo formato de json de Trizbort.io. En toería el antiguo debería seguir funcionando también. 
 
 - **1.0.3b9** 210415
 
- - Adaptado a DAAD Ready 0.3
+  - Adaptado a DAAD Ready 0.3
 
 - **1.0.3b8** 201218
 
- - Mejor organización del PRO 0 en modo DAAD Ready.
+  - Mejor organización del PRO 0 en modo DAAD Ready.
 
 - **1.0.3b7** 201209
 
- - Arreglado: elimina retornos de línea de textos de LTX en modo DSF y los sustituye por #n.
- - Opción para crear plantillas compatibles con DAAD Ready 0.2
+  - Arreglado: elimina retornos de línea de textos de LTX en modo DSF y los sustituye por #n.
+  - Opción para crear plantillas compatibles con DAAD Ready 0.2
 
 - **1.0.3b6** 200327
 
- - Eliminado el bloqueo de DOALL en MSX2 para probar nueva versión de MSX2DAAD.
- - Añadida opción -blockall para bloquear acciones "TODO".
+  - Eliminado el bloqueo de DOALL en MSX2 para probar nueva versión de MSX2DAAD.
+  - Añadida opción -blockall para bloquear acciones "TODO".
 
 - **1.0.3b3** 200322
 
- - Añadida opción para crear automáticamente identificadores de las localidades con directivas #define.
+  - Añadida opción para crear automáticamente identificadores de las localidades con directivas #define.
 
 - **1.0.3b2** 200314
 
- - Arreglado: el script se colgaba si quitabas todos los objetos en un mapa de Trizbort de escritorio.
- - Añadida opción para crear automáticamente identificadores de los objetos con directivas #define.
- - Añadida opción para usar cualquier objeto marcado con [l] como fuente de luz.
+  - Arreglado: el script se colgaba si quitabas todos los objetos en un mapa de Trizbort de escritorio.
+  - Añadida opción para crear automáticamente identificadores de los objetos con directivas #define.
+  - Añadida opción para usar cualquier objeto marcado con [l] como fuente de luz.
 
 - **1.0.3b1** 200305
 
- - En modo DSF la sección de definiciones ofrece opciónes para los colores de los modos 10 y 12 de MSX2.
+  - En modo DSF la sección de definiciones ofrece opciónes para los colores de los modos 10 y 12 de MSX2.
 
 - **1.0.2** 200222
 
- - Arreglado: especificar un fichero de salida colgaba el programa.
- - Bloqueados el reposicionamiento de la ventana de texto y las acciones "TODO" en MSX2 para una mejor compatibilidad con msx2daad.
- - Ahora la barra de estado es enteramente opcional.
- - Añadidas clausulas #define en la sección SYMBOLS para establecer los colores de texto y papel en cada plataforma, así como la fila de la ventana de texto y de la barra de estado.
- - Arreglado: Los condactos WHATO en las entradas de EXAMINAR y VACIAR podían enviar el valor 255 al condacto PRESENT [51] con resultados que parecían consistentes pero resultaron ser impredecibles.
- - Reinicia todas las banderas (menos GFlags) a 0, incluida la 255 (que se quedaba a 255 en la plantilla original).
- - Soporte para objetos contenidos dentro de otros según mapas de trizbort.io
- - Arreglado: dejaba el título en blanco si no se especificaba en map-settings de Trizbort de escritorio.
- - Arreglado: al importar ficheros XML del trizbort de escritorio ignoraba el campo 'history' de map-settings.
- - Permite objetos con el mismo nombre (avisando y evitando repetirlo en el vocabulario)
+  - Arreglado: especificar un fichero de salida colgaba el programa.
+  - Bloqueados el reposicionamiento de la ventana de texto y las acciones "TODO" en MSX2 para una mejor compatibilidad con msx2daad.
+  - Ahora la barra de estado es enteramente opcional.
+  - Añadidas clausulas #define en la sección SYMBOLS para establecer los colores de texto y papel en cada plataforma, así como la fila de la ventana de texto y de la barra de estado.
+  - Arreglado: Los condactos WHATO en las entradas de EXAMINAR y VACIAR podían enviar el valor 255 al condacto PRESENT [51] con resultados que parecían consistentes pero resultaron ser impredecibles.
+  - Reinicia todas las banderas (menos GFlags) a 0, incluida la 255 (que se quedaba a 255 en la plantilla original).
+  - Soporte para objetos contenidos dentro de otros según mapas de trizbort.io
+  - Arreglado: dejaba el título en blanco si no se especificaba en map-settings de Trizbort de escritorio.
+  - Arreglado: al importar ficheros XML del trizbort de escritorio ignoraba el campo 'history' de map-settings.
+  - Permite objetos con el mismo nombre (avisando y evitando repetirlo en el vocabulario)
 
 - **1.0.1** 190603
 
- - Actualizado a la nueva marca de inicio de entrada en formato DSF.
- - Arreglado: los mensajes de 1ª y 2ª persona estaban cambiados en modo DSF en inglés.
- - Arreglado: varios mensajes mal formateados en modo DSF en inglés.
+  - Actualizado a la nueva marca de inicio de entrada en formato DSF.
+  - Arreglado: los mensajes de 1ª y 2ª persona estaban cambiados en modo DSF en inglés.
+  - Arreglado: varios mensajes mal formateados en modo DSF en inglés.
 
 - **1.0** 190501
 
- - Carga ficheros tanto de Trizbort (aplicación de escritorio) como de Trizbort.io (aplicación web).
- - Opción para exportar a formato DSF del DAAD Reborn Compiler.
+  - Carga ficheros tanto de Trizbort (aplicación de escritorio) como de Trizbort.io (aplicación web).
+  - Opción para exportar a formato DSF del DAAD Reborn Compiler.
  
 
 # Triz2DAAD english doc
@@ -334,143 +334,143 @@ And for the moment Triz2DAAD cannot handle:
 
 - **1.0.4b20** 261020
 
- - DAAD Ready A compatible.
+  - DAAD Ready A compatible.
 
 - **1.0.4b19** 260825
 
- - Fixed crash when exporting to DAADReady in english: mispelled daadRaedy instead of daadReady in imprimeMTX_ENG_DSF().
+  - Fixed crash when exporting to DAADReady in english: mispelled daadRaedy instead of daadReady in imprimeMTX_ENG_DSF().
 
 - **1.0.4b18** 240619
 
- - Warns when an invalid trizbort.io connector is found.
+  - Warns when an invalid trizbort.io connector is found.
 
 - **1.0.4b17** 240402
 
- - Daad Ready 0.9.3 compatible.
+  - Daad Ready 0.9.3 compatible.
 
 - **1.0.4b16** 240103
 
- - Daad Ready 0.9.2 compatible.
+  - Daad Ready 0.9.2 compatible.
 
 - **1.0.4b15** 231031
 
- - Minor changes to keep up to date with DAAD Ready 0.9.1
+  - Minor changes to keep up to date with DAAD Ready 0.9.1
 
 -**1.0.4b14** 230804
 
- - Comment about exit messages at MTX mentions the right process (could be either 7 or 10).
- - Fixed DAAD-Ready template bug that prints the ANYKEY message at process 6 in window 0.
+  - Comment about exit messages at MTX mentions the right process (could be either 7 or 10).
+  - Fixed DAAD-Ready template bug that prints the ANYKEY message at process 6 in window 0.
 
 - **1.0.4b13** 230723
 
- - DAAD-Ready 0.8 compatible.
+  - DAAD-Ready 0.8 compatible.
 
 - **1.0.4b12** 230406
 
- -Non valid connection lines (those without a dock at locations) are ignored.
+  -Non valid connection lines (those without a dock at locations) are ignored.
 
 - **1.0.4b11** 230224
 
- - Default location description includes its number and, if defined, its name.
- - Removed MSX2 interpreter restrictions.
+  - Default location description includes its number and, if defined, its name.
+  - Removed MSX2 interpreter restrictions.
 
 - **1.0.4b10** 230212
 
- - -dr option automatically sets -idobj and -idloc.
- - idloc used in PRO 5 and 6.
- - Updates location numbers in default descriptions when using containers.
- - Darkness avoids the "exits" command.
+  -  -dr option automatically sets  -idobj and  -idloc.
+  - idloc used in PRO 5 and 6.
+  - Updates location numbers in default descriptions when using containers.
+  - Darkness avoids the "exits" command.
 
 - **1.0.4b9** 230109
 
- - DAAD-Ready 0.7 compatible.
- - Fixed: /CTL section shows properly in -dsf and -dr modes.
+  - DAAD-Ready 0.7 compatible.
+  - Fixed: /CTL section shows properly in  -dsf and  -dr modes.
 
 - **1.0.4b7** 220608
 
- - DAAD-Ready 0.6.1 compatible.
+  - DAAD-Ready 0.6.1 compatible.
 
 - **1.0.4b6** 220514
 
- - DAAD-Ready 0.6 compatible.
+  - DAAD-Ready 0.6 compatible.
 
 - **1.0.4b5** 220114
 
- - Added -ink option to set default ink value in 16 bits.
+  - Added  -ink option to set default ink value in 16 bits.
 
 - **1.0.4b4** 211102
 
- - Removes unused [m] and [1] attributes from objects (just in case someone used them from triz2sce days).
+  - Removes unused [m] and [1] attributes from objects (just in case someone used them from triz2sce days).
 
 - **1.0.4b3** 210512
 
- - Fixed issue with recursive containers in the new trizbort.io json format.
+  - Fixed issue with recursive containers in the new trizbort.io json format.
 
 - **1.0.4b2** 210422
 
- - Adapted to DAAD Ready 0.4
+  - Adapted to DAAD Ready 0.4
  
 - **1.0.4b1** 210420
 
- - Fixed some bugs related to flag identifiers in -DSF mode.
+  - Fixed some bugs related to flag identifiers in  -DSF mode.
 
 - **1.0.3** 210416
 
- - Adapted to Trizbort.io new json file format. Theorically older maps should still work.
+  - Adapted to Trizbort.io new json file format. Theorically older maps should still work.
 
 - **1.0.3b9** 210415
 
- - Adapted to DAAD Ready 0.3
+  - Adapted to DAAD Ready 0.3
 
 - **1.0.3b8** 201218
 
- - Better PRO 0 in DAAD Ready mode.
+  - Better PRO 0 in DAAD Ready mode.
 
 - **1.0.3b7** 201209
 
- - Fixed: line feeds are removed from LTX section in mode DSF and are replaced by #n. 
- - Added option to create DAAD Ready 0.2 compatible templates.
+  - Fixed: line feeds are removed from LTX section in mode DSF and are replaced by #n. 
+  - Added option to create DAAD Ready 0.2 compatible templates.
 
 - **1.0.3b6** 200327
 
- - Removed DOALL lock in MSX2 to test latest MSX2DAAD version.
- - Added new -blockall option to block "ALL" actions. 
+  - Removed DOALL lock in MSX2 to test latest MSX2DAAD version.
+  - Added new  -blockall option to block "ALL" actions. 
 
 - **1.0.3b3** 200322
 
- - Added option to automatically create identifiers for locations with #define directives.
+  - Added option to automatically create identifiers for locations with #define directives.
 
 - **1.0.3b2** 200314
 
- - Fixed: Script crashed if you deleted all objects in a desktop trizbort map.
- - Added option to automatically create identifiers for objects with #define directives.
- - Added option to make any object marked with [l] a lightsource.
+  - Fixed: Script crashed if you deleted all objects in a desktop trizbort map.
+  - Added option to automatically create identifiers for objects with #define directives.
+  - Added option to make any object marked with [l] a lightsource.
 
 - **1.0.3b1** 200305
 
- - When using DSF DEF section offers options for colours in MSX2 modes 10 and 12.
+  - When using DSF DEF section offers options for colours in MSX2 modes 10 and 12.
 
 - **1.0.2** 200222
 
- - Fixed: adding a name for the output file crashed the program.
- - Blocked text-window repositioning and "ALL" actions in MSX2 for better compatibility with msx2daad.
- - Now the status line is entirely optional.
- - Added #define statements at SYMBOLS section to set paper and ink colours in every target platform as well as the text window and the status line row.
- - Fixed: WHATO condacts in EXAMINE and EMPTY entries could send a value of 255 to a PRESENT [51] condact with results that seemed consistent but turned out to be unpredictable.
- - All flags (save GFlags) are reset to 0, including 255 (which was kept to 255 in the original template).
- - Fixed: Containers support from 1.0.2b3 crashed in maps without objects.
- - Support for objects inside other objects as established in trizbort.io maps.
- - Fixed: title was left blank if not specified at map-settings in desktop Trizbort.
- - Fixed: Map-settings 'history' field is no longer ignored when importing XML from desktop trizbort.
- - Objects with the same name are now allowed (with a warning and without repeating the name at the VOC section).
+  - Fixed: adding a name for the output file crashed the program.
+  - Blocked text-window repositioning and "ALL" actions in MSX2 for better compatibility with msx2daad.
+  - Now the status line is entirely optional.
+  - Added #define statements at SYMBOLS section to set paper and ink colours in every target platform as well as the text window and the status line row.
+  - Fixed: WHATO condacts in EXAMINE and EMPTY entries could send a value of 255 to a PRESENT [51] condact with results that seemed consistent but turned out to be unpredictable.
+  - All flags (save GFlags) are reset to 0, including 255 (which was kept to 255 in the original template).
+  - Fixed: Containers support from 1.0.2b3 crashed in maps without objects.
+  - Support for objects inside other objects as established in trizbort.io maps.
+  - Fixed: title was left blank if not specified at map-settings in desktop Trizbort.
+  - Fixed: Map-settings 'history' field is no longer ignored when importing XML from desktop trizbort.
+  - Objects with the same name are now allowed (with a warning and without repeating the name at the VOC section).
 
 - **1.0.1** 190602
 
- - Updated support for the new ">" mark for new entries in DSF format.
- - FIXED: 2nd and 1st person system messages were swapped in english DSF format.
- - FIXED: bad formatting in several english DSF messages.
+  - Updated support for the new ">" mark for new entries in DSF format.
+  - FIXED: 2nd and 1st person system messages were swapped in english DSF format.
+  - FIXED: bad formatting in several english DSF messages.
 
 - **1.0** 190501
 
- - Load files from both Trizbort desktop and web applications.
- - Support for DAAD Reborn Compiler DSF format.
+  - Load files from both Trizbort desktop and web applications.
+  - Support for DAAD Reborn Compiler DSF format.
