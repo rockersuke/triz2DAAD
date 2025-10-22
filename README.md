@@ -1,5 +1,4 @@
-Triz2DAAD
-*********
+# Triz2DAAD
 
 English instructions below!
 
@@ -9,8 +8,7 @@ Triz2DAAD es la fusión de los anteriores scripts de Python Triz2sce y Trizio2sc
 
 Triz2DAAD.py es un script de Python 3.x que transforma un fichero generado con la utilidad de escritorio Trizbort (a partir de la versión 1.7.0) o su variante on-line Trizbort.io para mapear aventuras en un código fuente compatible con el compilador del DAAD. No es un diseñador visual de aventuras ni una aplicación para su desarrollo completo. Está concebido como herramienta para hacer prototipos iniciales de aventuras con rapidez y facilidad y, a su vez, como herramienta de apoyo a autores nóveles, ideal para su uso en talleres de aprendizaje.
 
-Uso:
-====
+## Uso:
 
 Usar "Python triz2DAAD.py -h" en una línea de comandos o powershell para ver las opciones.
 
@@ -28,8 +26,8 @@ El script requiere como argumentos un fichero de entrada (que debe ser un mapa g
 - La opción -dr activa los modos -dsf, -idobj e -idloc y creará una plantilla compatible con DAAD Ready A
 - La opción -ink establecerá el color de tinta en 16 bits (por defecto 1).
 
-Enlaces:
-========
+## Enlaces:
+
 - Trizbort:
 
  - http://trizbort.com
@@ -89,15 +87,13 @@ Y por el momento triz2DAAD no puede manejarse con:
 - Textos personalizados en los extremos de las conexiones.
 - Conexiones con puntos intermedios en los espacios del mapa. Cualquier cosa que no sea una conexión directa entre una habitación y otra la ignorará.
 
-Bugs conocidos:
-===============
+## Bugs conocidos:
 
 - Debido al comportamiento ligeramente distinto del intérprete inglés, intentar meter un objeto contenedor dentro de sí mismo (o de un objeto inexistente) en una obra inglesa, en lugar de un mensaje de error hace que el jugador deje el objeto en la localidad actual.
 
 - Debido a que los condactos para meter y/o sacar objetos de contenedores usan un único mensaje del sistema, es probable que haya disonancias con el número (singular/plural) del objeto.
 
-HISTORIA
-========
+## HISTORIA
 
 - **1.0.4b20**
 
@@ -242,16 +238,14 @@ HISTORIA
  - Opción para exportar a formato DSF del DAAD Reborn Compiler.
  
 
-Triz2DAAD english doc
-*********************
+# Triz2DAAD english doc
 
 Triz2DAAD version 1.0.4b20 251020 (c) 2019-25 Pedro Fernández
 
 Triz2DAAD is a Python 3.x script that transforms a file generated with either the on-line text-adventure mapping tool Trizbort.io or the Trizbort desktop application into a source code compatible with the DAAD compiler. It's the fussion of former scripts Triz2SCE and Trizio2SCE, admitting both formats.
 It's not meant to be either an adventure visual designer or a complete development tool. It's conceived as a fast and easy text-adventure prototyping tool, and also as a supporting tool for novel authors, specially suitable for learning workshops.
 
-Usage:
-======
+## Usage:
 
 Type "Python triz2DAAD.py -h" in a command line or powershell window to see the options.
 
@@ -269,8 +263,7 @@ The script requires as an argument a file (wwhich must be a map generated with e
 - Option -dr sets -dsf, -idobj and -idloc modes and will create a DAAD Ready A compatible template.
 - Option -ink will set ink colour in 16 bits (default 1).
 
-Links:
-======
+## Links:
 
 -Trizbort:
 
@@ -331,15 +324,13 @@ And for the moment Triz2DAAD cannot handle:
 - Personalized texts at the connections extremes.
 - Connections with intermediate points along the map. Anything other than a direct connection between a room and another will be ignored.
 
-Known bugs:
-===========
+## Known bugs:
 
 - Due to the slighty different behavior of the english interpreter, trying to put a container object inside itself (or into a non-existent object) in an english work, instead of displaying an error message will make player drop the object at current location.
 
 - Number (singular/plural) discordances are to be expected due to the fact that putting in and out condacts use just one system message for both cases.
 
-HISTORY
-========
+## HISTORY
 
 - **1.0.4b20** 261020
 
