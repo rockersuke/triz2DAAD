@@ -1580,6 +1580,8 @@ def imprimeVOC2():
         print('PONER   23      verb', file=f)
         print('PONTE   23      verb', file=f)     
         print('MIRAR   24      verb', file=f)
+        print('MIRA    24      verb', file=f)
+        print('MIRAL   24      verb', file=f)
         print('M       24      verb', file=f)     
         print('REDES   24      verb', file=f)
         print('R       24      verb', file=f)
@@ -3202,6 +3204,17 @@ def imprimePRO1():
         print('                REDO', file=f)
         print('', file=f)
         if english:
+                print('; Turns LOOK with a known noun into EXAMINE.', file = f)
+        else:
+                print('; Hace que MIRAR con un noun reconocido equivalga a EXAMINAR.', file = f)
+        print('', file=f)
+        if english:
+                print('LOOK    _       NOTEQ 34 255', file = f)
+        else:
+                print('MIRAR   _       NOTEQ 34 255', file = f)
+        print('                LET 33 30', file = f)
+        print('', file=f)
+        if english:
                 print('; Turns counter entries.', file=f)      
         else:     
                 print('; Entradas para el contador de turnos.', file=f)
@@ -3380,12 +3393,15 @@ def imprimePRO3():
         print('', file=f)
         if dsf:
                 print('>', file=f)
-        print('_       _       NEWLINE', file=f)
+        print('_       _       SAVEAT', file=f)
         if dsf:
                 print('                ZERO fDarkF', file=f)
         else:
                 print('                ZERO DarkF', file=f)
+        print('                NEWLINE', file=f)        
         print('                LISTOBJ', file=f)
+        print('                HASNAT 55', file=f)
+        print('                BACKAT', file=f)
         print('', file=f)
         print(';------------------------------------------------------------------------------', file=f)
         if verbosity:
@@ -3650,15 +3666,11 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
         print('', file=f)
         if dsf:
                 print('>', file=f)
-        print('R       _       EQ 34 255', file=f)
         if daadReady:
-                print('                CLS', file = f)
-        print('                RESTART' , file=f)
-        print('', file=f)
-        if dsf:
-                print('>', file=f)
-        print('R       _       LET 33 30', file=f)
-        print('                REDO', file=f)
+                print('MIRAR   _       CLS', file = f)
+                print('                RESTART', file = f)
+        else:
+                print('MIRAR   _       RESTART', file = f) 
         print('', file=f)
         if dsf:
                 print('>', file=f)
@@ -3934,15 +3946,11 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
         print('', file=f)
         if dsf:
                 print('>', file=f)
-        print('R       _       EQ 34 255', file=f)
         if daadReady:
-                print('                CLS', file = f)
-        print('                RESTART' , file=f)
-        print('', file=f)
-        if dsf:
-                print('>', file=f)
-        print('R       _       LET 33 30', file=f)
-        print('                REDO', file=f)
+                print('LOOK    _       CLS', file = f)
+                print('                RESTART' , file = f)
+        else:
+                print('LOOK    _       RESTART', file = f)
         print('', file=f)
         if dsf:
                 print('>', file=f)
@@ -4876,7 +4884,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b20 251020 (c) 2019-25 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b21 251114 (c) 2019-25 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
