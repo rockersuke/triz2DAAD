@@ -3505,6 +3505,27 @@ def imprimePRO5(helpMessage1, helpMessage2, listRooms2):
         print('                RESTART', file=f)  
         print('', file=f)
         if dsf:
+                print('>', file = f)
+        if dsf:
+                print('EXAMI   _       NOTZERO fDarkF', file = f)
+        else:
+                print('EXAMI   _       NOTZERO DarkF', file = f)     
+        print('                SYSMESS 0', file = f)
+        print('                NEWLINE', file = f)
+        print('                DONE', file = f)
+        print('', file = f)
+        print('; Las entradas de EXAMINAR deben de ir en este espacio.', file = f)
+        print('; (entre la que impide examinar sin luz y las entreadas de EXAMINAR por defecto)', file = f)
+        print(';', file = f)
+        print('; **********************************************', file = f)
+        print('', file = f)
+        print('', file = f)
+        print('', file = f)
+        print('', file = f)
+        print('', file = f)
+        print('; **********************************************', file = f)
+        print('', file = f)
+        if dsf:
                 print('>', file=f)
         print('EXAMI   _       WHATO', file=f)
         print('                NOTEQ 51 255', file=f)
@@ -3789,6 +3810,27 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
         print('                ANYKEY', file=f)
         print('                RESTART', file=f)  
         print('', file=f)
+        if dsf:
+                print('>', file = f)
+        if dsf:
+                print('EXAMI   _       NOTZERO fDarkF', file = f)
+        else:
+                print('EXAMI   _       NOTZERO DarkF', file = f)     
+        print('                SYSMESS 0', file = f)
+        print('                NEWLINE', file = f)
+        print('                DONE', file = f)
+        print('', file = f)
+        print('; Las entradas de EXAMINAR deben de ir en este espacio.', file = f)
+        print('; (entre la que impide examinar sin luz y las entreadas de EXAMINAR por defecto)', file = f)
+        print(';', file = f)
+        print('; **********************************************', file = f)
+        print('', file = f)
+        print('', file = f)
+        print('', file = f)
+        print('', file = f)
+        print('', file = f)
+        print('; **********************************************', file = f)
+        print('', file = f)
         if dsf:
                 print('>', file=f)
         print('EXAMI   _       WHATO', file=f)
@@ -4884,7 +4926,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b21 251114 (c) 2019-25 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b22 251118 (c) 2019-25 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 
