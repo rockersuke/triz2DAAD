@@ -3208,6 +3208,8 @@ def imprimePRO1():
         else:
                 print('; Hace que MIRAR con un noun reconocido equivalga a EXAMINAR.', file = f)
         print('', file=f)
+        if dsf:
+                print('>', file=f)
         if english:
                 print('LOOK    _       NOTEQ 34 255', file = f)
         else:
@@ -3820,8 +3822,8 @@ def imprimePRO5_ENG(helpMessage1, helpMessage2, listRooms2):
         print('                NEWLINE', file = f)
         print('                DONE', file = f)
         print('', file = f)
-        print('; Las entradas de EXAMINAR deben de ir en este espacio.', file = f)
-        print('; (entre la que impide examinar sin luz y las entreadas de EXAMINAR por defecto)', file = f)
+        print('; EXAMINE entries should be in this space.', file = f)
+        print('; (between the one that blocks examining in the dark and EXAMINE default entries).', file = f)
         print(';', file = f)
         print('; **********************************************', file = f)
         print('', file = f)
@@ -4926,7 +4928,7 @@ def createLocationIdentifiers():
         return aux
 
 print()
-print('Triz2DAAD versión 1.0.4b22 251118 (c) 2019-25 Pedro Fernández')     
+print('Triz2DAAD versión 1.0.4b23 251119 (c) 2019-25 Pedro Fernández')     
 print('-h para ayuda / -h for options')
 print()
 

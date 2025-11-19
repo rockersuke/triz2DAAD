@@ -2,7 +2,7 @@
 
 English instructions below!
 
-Triz2DAAD versión 1.0.4b22 251118 (c) 2019-25 Pedro Fernández
+Triz2DAAD versión 1.0.4b23 251119 (c) 2019-25 Pedro Fernández
 
 Triz2DAAD es la fusión de los anteriores scripts de Python Triz2sce y Trizio2sce, que cargaban, en cada caso, ficheros procedentes de las utilidades Trizbort y Trizbort.io respectivamente. Este nuevo script carga indistintamente de una o de otra y realiza internamente la conversión necesaria para que un sólo script se puedan manejar ambos formatos.
 
@@ -95,7 +95,11 @@ Y por el momento triz2DAAD no puede manejarse con:
 
 ## HISTORIA
 
--**1.0.4b22** 251118
+- **1.0.4b23** 251119
+
+  - Arreglado: la entrada de MIRAR en PRO 1 carecía de su obligado '>' para DSF.
+
+- **1.0.4b22** 251118
 
   - Impide la acción EXAMINAR en la oscuridad.
 
@@ -250,7 +254,7 @@ Y por el momento triz2DAAD no puede manejarse con:
 
 # Triz2DAAD english doc
 
-Triz2DAAD version 1.0.4b22 251118 (c) 2019-25 Pedro Fernández
+Triz2DAAD version 1.0.4b23 251119 (c) 2019-25 Pedro Fernández
 
 Triz2DAAD is a Python 3.x script that transforms a file generated with either the on-line text-adventure mapping tool Trizbort.io or the Trizbort desktop application into a source code compatible with the DAAD compiler. It's the fussion of former scripts Triz2SCE and Trizio2SCE, admitting both formats.
 It's not meant to be either an adventure visual designer or a complete development tool. It's conceived as a fast and easy text-adventure prototyping tool, and also as a supporting tool for novel authors, specially suitable for learning workshops.
@@ -341,6 +345,10 @@ And for the moment Triz2DAAD cannot handle:
 - Number (singular/plural) discordances are to be expected due to the fact that putting in and out condacts use just one system message for both cases.
 
 ## HISTORY
+
+- **1.0.4b23** 251119
+
+  - Fixed: LOOK entry in PRO 1 was lacking the mandatory '>' for DSF.
 
 -**1.0.4b22** 251118
 
